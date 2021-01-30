@@ -1,18 +1,14 @@
 defmodule ExMon do
-  @moduledoc """
-  Documentation for `ExMon`.
-  """
+  alias ExMon.{Game, Player}
 
-  @doc """
-  Hello world.
+  @computer_name "King Kong"
+  def create_player(name, move_avg, move_rdn, move_heal) do
+      Player.build(name, move_avg, move_rdn, move_heal)
+  end
 
-  ## Examples
-
-      iex> ExMon.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def start_game(player) do
+    @computer_name
+    |> create_player(:punch, :kick, :heal)
+    |> Game.start( player)
   end
 end
