@@ -10,7 +10,7 @@ defmodule ExMon do
 
   def start_game(player) do
     @computer_name
-    |> create_player(:punch, :kick, :heal)
+    |> create_player(:soco, :soco, :banana)
     |> Game.start(player)
     Status.print_round_message(Game.info)
   end
@@ -23,7 +23,7 @@ defmodule ExMon do
     computer_move(Game.info)
   end
 
-  defp handle_status(:game_over, _move), do: Status.print_round_message(Game.info())
+  defp handle_status(:game_over, _move), do: Status.print_round_message(Game.info)
 
   defp handle_status(_other, move) do
     move
@@ -38,7 +38,7 @@ defmodule ExMon do
       move -> Actions.attack(move)
     end
 
-    Status.print_round_message(Game.info)
+    Status.print_round_message(Game.info())
   end
 
   defp computer_move(%{turn: :computer, status: :continue}) do
