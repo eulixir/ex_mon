@@ -1,4 +1,4 @@
-defmodule ExMon.Game.Update do
+defmodule ExMon.Game do
   alias ExMon.Player
 
   use Agent
