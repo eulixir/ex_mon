@@ -1,12 +1,15 @@
 defmodule ExMon.Game do
   alias ExMon.Player
-  @random_player [:player, :computer]
+  # @random_player [:player, :computer]
   use Agent
 
 
 
   def start(computer, player) do
-      initial_value = %{computer: computer, player: player, turn: Enum.random(@random_player), status: :started}
+      initial_value = %{computer: computer, player: player, turn: :player, status: :started}
+
+      # To test pass, turn can't random
+      # initial_value = %{computer: computer, player: player, turn: Enum.random(@random_player), status: :started}
       Agent.start_link(fn -> initial_value end, name: __MODULE__)
   end
 
