@@ -3,8 +3,6 @@ defmodule ExMon.Game do
   # @random_player [:player, :computer]
   use Agent
 
-
-
   def start(computer, player) do
       initial_value = %{computer: computer, player: player, turn: :player, status: :started}
 
