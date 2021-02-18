@@ -8,6 +8,7 @@ defmodule ExMon.Repo.Migrations.CreateTrainerTable do
       add :name, :string
       add :password_hash, :string
       timestamps()
+
     end
   end
 end
