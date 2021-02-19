@@ -2,9 +2,7 @@
 
 ## Tema do projeto
 
-Um clone da landing page do Google.
-
-## Sobre o nosso projeto
+## Sobre o projeto
 
 <div align="justify">
 Um jogo baseado em turnos, parecido com o Pokemon.
