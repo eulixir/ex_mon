@@ -1,8 +1,8 @@
 defmodule ExMon.Trainer.Pokemon do
   use Ecto.Schema
   import Ecto.Changeset
+  alias ExMon.Trainer
 
-  alias Ecto.Changeset
 
   @primary_key {:id, Ecto.UUID, autogenerate: true}
   @foreign_key_type Ecto.UUID
@@ -30,6 +30,13 @@ defmodule ExMon.Trainer.Pokemon do
     |> validate_required(@required)
     # Challenge, verify if id_trainer exists
     # |> assoc_constraint(:trainer)
+    |> validate_length(:nickname, min: 2)
+  end
+
+  def update_changeset(pokemon, params) do
+    pokemon
+    |> cast(params, [:nickname])
+    |> validate_required([:nickname])
     |> validate_length(:nickname, min: 2)
   end
 end
