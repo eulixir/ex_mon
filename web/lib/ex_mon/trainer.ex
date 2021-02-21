@@ -2,7 +2,7 @@ defmodule ExMon.Trainer do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias ExMon.Trainer
+  alias ExMon.Trainer.Pokemon
 
   @primary_key {:id, Ecto.UUID, autogenerate: true}
 
