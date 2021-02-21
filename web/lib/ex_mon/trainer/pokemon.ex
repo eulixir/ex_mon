@@ -28,6 +28,8 @@ defmodule ExMon.Trainer.Pokemon do
     %__MODULE__{}
     |> cast(params, @required)
     |> validate_required(@required)
+    # Challenge, verify if id_trainer exists
+    # |> assoc_constraint(:trainer)
     |> validate_length(:nickname, min: 2)
   end
 end
