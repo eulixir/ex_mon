@@ -1,7 +1,6 @@
 defmodule ExMon.Trainer.Create do
   alias ExMon.{Trainer, Repo}
 
-
   def call(params) do
     params
     |> Trainer.build()
