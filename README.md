@@ -13,19 +13,14 @@ Um jogo baseado em turnos, parecido com o Pokemon.
 
 <h2>Download do Projeto</h2>
     <img src="./gitDocs/googleLanding.png" alt="" srcset="" style="box-shadow: 2px 2px 10px black">
-    <p>Faça o clone do Repositorio em sua maquina com o comando <code>git clone https://github.com/joaopealves/google-ux-clone.git</code></p>
+    <p>Faça o clone do Repositorio em sua maquina com o comando <code>git clone https://github.com/joaopealves/ex_mon.git</code></p>
 
 ## Adicionar dependênicas
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ex_mon` to your list of dependencies in `mix.exs`:
 
 ```elixir
-def deps do
-  [
-    {:ex_mon, "~> 0.1.0"}
-  ]
-end
+  mix deps.get
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
